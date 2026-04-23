@@ -10,6 +10,16 @@ An automated Governance, Risk, and Compliance (GRC) analysis platform designed t
 - **Remediation Roadmap**: Prioritizes actions based on control tier (Required vs. Desired) and technical severity.
 - **Portable Desktop Interface**: Runs as a native application with a high-fidelity glassmorphism dashboard.
 
+## Supported Frameworks
+
+The platform currently supports the following compliance frameworks and standards:
+
+- **NIST CSF 2.0**: National Institute of Standards and Technology Cybersecurity Framework.
+- **ISO/IEC 27001:2022**: Information security management systems.
+- **SOC2 (2017)**: System and Organization Controls for Trust Services Criteria.
+- **CIS Controls v8.0**: Critical Security Controls for Effective Cyber Defense.
+- **MITRE ATT&CK**: Enterprise matrix mapping for threat-informed defense.
+
 ## Dashboard Overview
 
 ![Main Dashboard](images/dashboard.png)
