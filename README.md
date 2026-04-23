@@ -39,7 +39,7 @@ The core application relies on the following Python libraries:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/GRCA.git
+   git clone https://github.com/ramtin2e/GRCA.git
    cd GRCA
    ```
 
