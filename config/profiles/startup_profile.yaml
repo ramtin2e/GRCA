@@ -1,0 +1,36 @@
+# Startup / Growth-Stage Compliance Profile
+# Realistic tiered approach for organizations that need SOC 2 for sales,
+# aspire to NIST CSF maturity, and treat ISO 27001 as a long-term goal.
+
+profile_name: "Growth-Stage Startup"
+description: >
+  SOC 2 Type II is the sales blocker — treat as REQUIRED.
+  NIST CSF 2.0 is the strategic security target — DESIRED.
+  ISO 27001 certification is aspirational — NICE_TO_HAVE.
+
+frameworks:
+  SOC2:
+    version: "2017"
+    tier: REQUIRED
+    overrides: {}
+
+  NIST_CSF:
+    version: "2.0"
+    tier: DESIRED
+    overrides:
+      # Governance is new in CSF 2.0 and less mature — deprioritize
+      GV.OC-01: NICE_TO_HAVE
+      GV.OC-02: NICE_TO_HAVE
+      GV.OC-03: NICE_TO_HAVE
+
+  ISO_27001:
+    version: "2022"
+    tier: NICE_TO_HAVE
+    overrides:
+      # Even aspirational — vulnerability management is critical
+      A.8.8: DESIRED
+
+  CIS_CONTROLS:
+    version: "8.0"
+    tier: NICE_TO_HAVE
+    overrides: {}

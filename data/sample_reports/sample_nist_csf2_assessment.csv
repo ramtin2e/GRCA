@@ -1,0 +1,31 @@
+Control_ID,Control_Name,Category,Status,Framework,Severity,Notes
+PR.AA-01,Identities and credentials managed,Protect,Partial,NIST_CSF,Critical,MFA deployed for admin accounts only; general users lack MFA
+PR.AA-02,Identities proofed and bound to credentials,Protect,Implemented,NIST_CSF,High,Identity proofing via HR onboarding process
+PR.AA-03,Users services and hardware authenticated,Protect,Implemented,NIST_CSF,Critical,SSO deployed across all major applications
+PR.AA-04,Identity assertions protected and verified,Protect,Missing,NIST_CSF,High,SAML assertions not validated; token replay possible
+PR.AA-05,Access permissions and authorizations managed,Protect,Missing,NIST_CSF,Critical,No formal RBAC model; permissions granted ad-hoc
+PR.AA-06,Physical access managed and monitored,Protect,Implemented,NIST_CSF,Medium,Badge access with video surveillance in place
+PR.DS-01,Data-at-rest is protected,Protect,Partial,NIST_CSF,Critical,Database encryption enabled; file shares unencrypted
+PR.DS-02,Data-in-transit is protected,Protect,Implemented,NIST_CSF,Critical,TLS 1.3 enforced on all external connections
+PR.DS-10,Data-in-use confidentiality protected,Protect,Missing,NIST_CSF,High,No memory protection or DLP for runtime data
+PR.PS-01,Configuration management practices established,Protect,Partial,NIST_CSF,High,Baseline configs exist but drift detection missing
+PR.PS-02,Software maintained and patched,Protect,Missing,NIST_CSF,Critical,No automated patch management; 90-day patching SLA frequently missed
+PR.PS-06,Secure software development practices,Protect,Partial,NIST_CSF,High,SAST in CI/CD but no DAST or SCA scanning
+PR.IR-01,Networks protected from unauthorized access,Protect,Implemented,NIST_CSF,High,Network segmentation with micro-segmentation for PCI scope
+PR.IR-04,Adequate resource capacity for availability,Protect,Implemented,NIST_CSF,Medium,Auto-scaling configured in cloud environments
+DE.CM-01,Networks monitored for adverse events,Detect,Implemented,NIST_CSF,High,SIEM deployed with 24/7 SOC monitoring
+DE.CM-02,Physical environment monitored,Detect,Implemented,NIST_CSF,Medium,Motion sensors and CCTV at all facilities
+DE.CM-03,Computing hardware and software monitored,Detect,Partial,NIST_CSF,High,EDR deployed on 80% of endpoints; servers lack coverage
+DE.CM-06,External service provider activities monitored,Detect,Missing,NIST_CSF,Medium,No third-party risk monitoring program
+DE.CM-09,Security tool integrity monitored,Detect,Missing,NIST_CSF,High,No monitoring for security tool tampering
+DE.AE-02,Detected events analyzed,Detect,Implemented,NIST_CSF,High,Automated alert triage with ML-based correlation
+DE.AE-06,Adverse event information shared with staff,Detect,Partial,NIST_CSF,Medium,Alert distribution manual; no automated escalation workflow
+RS.MA-01,Incident response plan executed,Respond,Missing,NIST_CSF,Critical,IR plan exists on paper; never tested via tabletop exercise
+RS.AN-03,Incident analysis performed,Respond,Partial,NIST_CSF,High,Forensic analysis capability limited to senior analyst only
+RS.MI-01,Incidents are contained,Respond,Partial,NIST_CSF,Critical,Manual containment procedures; no automated isolation capability
+RS.MI-02,Incidents are eradicated,Respond,Missing,NIST_CSF,High,No formal eradication playbooks or procedures
+RC.RP-01,Recovery plan executed,Recover,Missing,NIST_CSF,Critical,Backups exist but recovery testing never performed
+GV.RM-01,Risk management objectives established,Govern,Partial,NIST_CSF,Medium,Risk appetite statement drafted; not board-approved
+GV.SC-01,Supply chain risk management program,Govern,Missing,NIST_CSF,High,No formal vendor security assessment process
+ID.RA-01,Vulnerabilities identified and recorded,Identify,Missing,NIST_CSF,Critical,No vulnerability scanning program; relying on vendor notifications
+ID.AM-01,Hardware inventories maintained,Identify,Implemented,NIST_CSF,Medium,CMDB maintained with automated discovery

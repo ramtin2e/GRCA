@@ -1,0 +1,62 @@
+# GRC Threat Modeler - Application Configuration
+
+application:
+  name: "GRC Threat Modeler"
+  version: "0.1.0"
+
+# Default paths
+paths:
+  output_dir: "./outputs"
+  mappings_dir: "./data/mappings"
+  mitre_attack_dir: "./data/mitre_attack"
+  default_profile: "./config/profiles/default_profile.yaml"
+
+# Logging
+logging:
+  level: "INFO"           # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_to_file: false
+  log_file: "./logs/grc_modeler.log"
+
+# Parser settings
+parsers:
+  csv:
+    # Column name aliases — the parser will try these in order
+    control_id_columns: ["Control_ID", "control_id", "ID", "ControlID", "control_identifier"]
+    control_name_columns: ["Control_Name", "control_name", "Name", "ControlName", "title"]
+    status_columns: ["Status", "status", "Implementation_Status", "impl_status", "state"]
+    framework_columns: ["Framework", "framework", "Standard", "standard"]
+    category_columns: ["Category", "category", "Function", "function", "Domain", "domain"]
+    severity_columns: ["Severity", "severity", "Priority", "priority", "Risk_Level"]
+
+  pdf:
+    # Table extraction settings
+    table_strategy: "text"    # "text" or "lines" — pdfplumber extraction strategy
+    min_table_rows: 2         # Minimum rows to consider a valid table
+
+# Gap analysis settings
+analysis:
+  # Tier scoring weights
+  tier_weights:
+    REQUIRED: 3.0
+    DESIRED: 2.0
+    NICE_TO_HAVE: 1.0
+
+  # Severity base scores
+  severity_scores:
+    Critical: 10.0
+    High: 7.5
+    Medium: 5.0
+    Low: 2.5
+    Informational: 1.0
+
+  # Status weights (how much of a "gap" each status represents)
+  status_weights:
+    Implemented: 0.0
+    Partial: 0.5
+    Missing: 1.0
+    Not_Applicable: 0.0
+
+# MITRE ATT&CK settings
+mitre:
+  attack_version: "15.1"
+  stix_url: "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json"

@@ -1,0 +1,142 @@
+{
+  "A.5.1": {
+    "control_name": "Policies for information security",
+    "mitigates_techniques": ["T1078", "T1199"],
+    "protects_assets": ["organizational_governance"],
+    "tactics": ["Initial Access"],
+    "criticality": "Medium"
+  },
+  "A.6.1": {
+    "control_name": "Screening",
+    "mitigates_techniques": ["T1078"],
+    "protects_assets": ["user_accounts", "organizational_trust"],
+    "tactics": ["Initial Access"],
+    "criticality": "Medium"
+  },
+  "A.7.1": {
+    "control_name": "Physical security perimeters",
+    "mitigates_techniques": ["T1200", "T1091"],
+    "protects_assets": ["physical_infrastructure", "data_centers"],
+    "tactics": ["Initial Access"],
+    "criticality": "Medium"
+  },
+  "A.8.1": {
+    "control_name": "User endpoint devices",
+    "mitigates_techniques": ["T1091", "T1200", "T1052"],
+    "protects_assets": ["endpoints", "mobile_devices"],
+    "tactics": ["Initial Access", "Exfiltration"],
+    "criticality": "High"
+  },
+  "A.8.3": {
+    "control_name": "Information access restriction",
+    "mitigates_techniques": ["T1078", "T1098", "T1136"],
+    "protects_assets": ["data_repositories", "access_control_systems"],
+    "tactics": ["Persistence", "Privilege Escalation"],
+    "criticality": "High"
+  },
+  "A.8.5": {
+    "control_name": "Secure authentication",
+    "mitigates_techniques": ["T1110", "T1078", "T1556"],
+    "protects_assets": ["authentication_systems", "user_accounts"],
+    "tactics": ["Initial Access", "Credential Access"],
+    "criticality": "Critical"
+  },
+  "A.8.7": {
+    "control_name": "Protection against malware",
+    "mitigates_techniques": ["T1204", "T1059", "T1203"],
+    "protects_assets": ["endpoints", "servers"],
+    "tactics": ["Execution", "Initial Access"],
+    "criticality": "High"
+  },
+  "A.8.8": {
+    "control_name": "Management of technical vulnerabilities",
+    "mitigates_techniques": ["T1190", "T1203", "T1210", "T1068"],
+    "protects_assets": ["web_applications", "servers", "network_devices"],
+    "tactics": ["Initial Access", "Execution", "Privilege Escalation"],
+    "criticality": "Critical"
+  },
+  "A.8.9": {
+    "control_name": "Configuration management",
+    "mitigates_techniques": ["T1574", "T1546", "T1547"],
+    "protects_assets": ["servers", "workstations"],
+    "tactics": ["Persistence", "Privilege Escalation"],
+    "criticality": "High"
+  },
+  "A.8.10": {
+    "control_name": "Information deletion",
+    "mitigates_techniques": ["T1485", "T1070.004"],
+    "protects_assets": ["data_repositories", "backup_systems"],
+    "tactics": ["Impact", "Defense Evasion"],
+    "criticality": "Medium"
+  },
+  "A.8.12": {
+    "control_name": "Data leakage prevention",
+    "mitigates_techniques": ["T1048", "T1567", "T1041"],
+    "protects_assets": ["data_flows", "endpoints", "email_systems"],
+    "tactics": ["Exfiltration"],
+    "criticality": "High"
+  },
+  "A.8.15": {
+    "control_name": "Logging",
+    "mitigates_techniques": ["T1070", "T1562", "T1036"],
+    "protects_assets": ["log_infrastructure", "siem_systems"],
+    "tactics": ["Defense Evasion"],
+    "criticality": "High"
+  },
+  "A.8.16": {
+    "control_name": "Monitoring activities",
+    "mitigates_techniques": ["T1071", "T1090", "T1095"],
+    "protects_assets": ["network_traffic", "security_operations"],
+    "tactics": ["Command and Control"],
+    "criticality": "High"
+  },
+  "A.8.20": {
+    "control_name": "Networks security",
+    "mitigates_techniques": ["T1021", "T1570", "T1210"],
+    "protects_assets": ["network_infrastructure", "network_segments"],
+    "tactics": ["Lateral Movement"],
+    "criticality": "High"
+  },
+  "A.8.21": {
+    "control_name": "Security of network services",
+    "mitigates_techniques": ["T1557", "T1040"],
+    "protects_assets": ["network_services", "dns_infrastructure"],
+    "tactics": ["Credential Access", "Collection"],
+    "criticality": "High"
+  },
+  "A.8.24": {
+    "control_name": "Use of cryptography",
+    "mitigates_techniques": ["T1040", "T1557", "T1530"],
+    "protects_assets": ["data_at_rest", "data_in_transit"],
+    "tactics": ["Credential Access", "Collection"],
+    "criticality": "Critical"
+  },
+  "A.8.25": {
+    "control_name": "Secure development life cycle",
+    "mitigates_techniques": ["T1195", "T1059", "T1203"],
+    "protects_assets": ["software_supply_chain", "applications"],
+    "tactics": ["Initial Access", "Execution"],
+    "criticality": "High"
+  },
+  "A.8.28": {
+    "control_name": "Secure coding",
+    "mitigates_techniques": ["T1190", "T1059"],
+    "protects_assets": ["web_applications"],
+    "tactics": ["Initial Access", "Execution"],
+    "criticality": "High"
+  },
+  "A.5.23": {
+    "control_name": "Information security for use of cloud services",
+    "mitigates_techniques": ["T1530", "T1078.004", "T1537"],
+    "protects_assets": ["cloud_infrastructure", "cloud_storage"],
+    "tactics": ["Collection", "Initial Access", "Exfiltration"],
+    "criticality": "High"
+  },
+  "A.5.30": {
+    "control_name": "ICT readiness for business continuity",
+    "mitigates_techniques": ["T1486", "T1490", "T1485"],
+    "protects_assets": ["backup_systems", "recovery_infrastructure"],
+    "tactics": ["Impact"],
+    "criticality": "Critical"
+  }
+}

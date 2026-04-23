@@ -1,0 +1,162 @@
+{
+  "audit_date": "2026-03-15",
+  "organization": "ACME Corporation",
+  "auditor": "SecureAudit LLC",
+  "audit_scope": "ISO/IEC 27001:2022 Annex A Controls",
+  "certification_status": "Surveillance Audit",
+  "controls": [
+    {
+      "control_id": "A.5.1",
+      "name": "Policies for information security",
+      "status": "Implemented",
+      "category": "Organizational",
+      "severity": "Medium",
+      "evidence": "Information security policy approved by management, reviewed annually",
+      "findings": []
+    },
+    {
+      "control_id": "A.6.1",
+      "name": "Screening",
+      "status": "Implemented",
+      "category": "People",
+      "severity": "Medium",
+      "evidence": "Background checks performed for all new hires per HR policy",
+      "findings": []
+    },
+    {
+      "control_id": "A.7.1",
+      "name": "Physical security perimeters",
+      "status": "Implemented",
+      "category": "Physical",
+      "severity": "Medium",
+      "evidence": "Security perimeters defined with badge access and visitor logs",
+      "findings": []
+    },
+    {
+      "control_id": "A.8.1",
+      "name": "User endpoint devices",
+      "status": "Partial",
+      "category": "Technological",
+      "severity": "High",
+      "evidence": "MDM deployed for corporate devices; BYOD policy lacks enforcement",
+      "findings": ["BYOD devices not enrolled in MDM", "No remote wipe capability for personal devices"]
+    },
+    {
+      "control_id": "A.8.3",
+      "name": "Information access restriction",
+      "status": "Partial",
+      "category": "Technological",
+      "severity": "High",
+      "evidence": "RBAC implemented for new applications; 3 legacy systems lack access controls",
+      "findings": ["Legacy CRM system allows unrestricted data access", "No periodic access review process"]
+    },
+    {
+      "control_id": "A.8.5",
+      "name": "Secure authentication",
+      "status": "Partial",
+      "category": "Technological",
+      "severity": "Critical",
+      "evidence": "MFA for cloud apps; internal apps use password-only authentication",
+      "findings": ["Internal applications lack MFA", "Password policy allows 8-character minimum"]
+    },
+    {
+      "control_id": "A.8.7",
+      "name": "Protection against malware",
+      "status": "Implemented",
+      "category": "Technological",
+      "severity": "High",
+      "evidence": "EDR solution deployed across all managed endpoints",
+      "findings": []
+    },
+    {
+      "control_id": "A.8.8",
+      "name": "Management of technical vulnerabilities",
+      "status": "Missing",
+      "category": "Technological",
+      "severity": "Critical",
+      "evidence": "No vulnerability scanning process established",
+      "findings": ["No vulnerability management program", "Patch management inconsistent", "No risk-based prioritization"]
+    },
+    {
+      "control_id": "A.8.9",
+      "name": "Configuration management",
+      "status": "Partial",
+      "category": "Technological",
+      "severity": "High",
+      "evidence": "Baseline configurations documented but not enforced via automation",
+      "findings": ["Configuration drift not monitored"]
+    },
+    {
+      "control_id": "A.8.12",
+      "name": "Data leakage prevention",
+      "status": "Missing",
+      "category": "Technological",
+      "severity": "High",
+      "evidence": "No DLP solution deployed",
+      "findings": ["No monitoring of data exfiltration channels", "USB ports unrestricted"]
+    },
+    {
+      "control_id": "A.8.15",
+      "name": "Logging",
+      "status": "Implemented",
+      "category": "Technological",
+      "severity": "High",
+      "evidence": "Centralized logging with 12-month retention",
+      "findings": []
+    },
+    {
+      "control_id": "A.8.16",
+      "name": "Monitoring activities",
+      "status": "Implemented",
+      "category": "Technological",
+      "severity": "High",
+      "evidence": "SIEM with 24/7 SOC monitoring and automated alerting",
+      "findings": []
+    },
+    {
+      "control_id": "A.8.20",
+      "name": "Network security",
+      "status": "Implemented",
+      "category": "Technological",
+      "severity": "High",
+      "evidence": "Firewall rules documented and reviewed quarterly; network segmentation in place",
+      "findings": []
+    },
+    {
+      "control_id": "A.8.24",
+      "name": "Use of cryptography",
+      "status": "Partial",
+      "category": "Technological",
+      "severity": "Critical",
+      "evidence": "TLS enforced for external traffic; internal traffic partially encrypted",
+      "findings": ["Internal east-west traffic lacks encryption"]
+    },
+    {
+      "control_id": "A.8.25",
+      "name": "Secure development life cycle",
+      "status": "Partial",
+      "category": "Technological",
+      "severity": "High",
+      "evidence": "SAST integrated in CI/CD; no threat modeling or security design reviews",
+      "findings": ["No threat modeling process", "Security testing limited to SAST"]
+    },
+    {
+      "control_id": "A.5.23",
+      "name": "Information security for cloud services",
+      "status": "Missing",
+      "category": "Organizational",
+      "severity": "High",
+      "evidence": "No cloud security framework or CSPM solution",
+      "findings": ["Cloud configurations not monitored", "No cloud-specific security policies"]
+    },
+    {
+      "control_id": "A.5.30",
+      "name": "ICT readiness for business continuity",
+      "status": "Partial",
+      "category": "Organizational",
+      "severity": "Critical",
+      "evidence": "DR plan exists; last tested 18 months ago",
+      "findings": ["DR testing overdue", "RTO/RPO objectives not validated"]
+    }
+  ]
+}

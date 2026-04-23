@@ -1,0 +1,212 @@
+{
+  "PR.AA-01": {
+    "control_name": "Identities and credentials are issued, managed, verified, revoked, and audited for authorized devices, users, and processes",
+    "mitigates_techniques": ["T1078", "T1110", "T1555", "T1552", "T1556"],
+    "protects_assets": ["user_accounts", "authentication_systems", "identity_providers"],
+    "tactics": ["Initial Access", "Credential Access", "Privilege Escalation", "Defense Evasion", "Persistence"],
+    "criticality": "Critical"
+  },
+  "PR.AA-02": {
+    "control_name": "Identities are proofed and bound to credentials based on the context of interactions",
+    "mitigates_techniques": ["T1078", "T1134", "T1550"],
+    "protects_assets": ["user_accounts", "authentication_systems"],
+    "tactics": ["Initial Access", "Defense Evasion", "Lateral Movement"],
+    "criticality": "High"
+  },
+  "PR.AA-03": {
+    "control_name": "Users, services, and hardware are authenticated",
+    "mitigates_techniques": ["T1078", "T1110", "T1021", "T1563"],
+    "protects_assets": ["user_accounts", "services", "hardware_devices"],
+    "tactics": ["Initial Access", "Credential Access", "Lateral Movement"],
+    "criticality": "Critical"
+  },
+  "PR.AA-04": {
+    "control_name": "Identity assertions are protected, conveyed, and verified",
+    "mitigates_techniques": ["T1550", "T1558", "T1606"],
+    "protects_assets": ["authentication_tokens", "kerberos_infrastructure", "saml_providers"],
+    "tactics": ["Credential Access", "Lateral Movement"],
+    "criticality": "High"
+  },
+  "PR.AA-05": {
+    "control_name": "Access permissions, entitlements, and authorizations are defined and managed",
+    "mitigates_techniques": ["T1098", "T1136", "T1078.002", "T1484"],
+    "protects_assets": ["active_directory", "access_control_systems", "privileged_accounts"],
+    "tactics": ["Persistence", "Privilege Escalation"],
+    "criticality": "Critical"
+  },
+  "PR.AA-06": {
+    "control_name": "Physical access to assets is managed, monitored, and enforced",
+    "mitigates_techniques": ["T1200", "T1091"],
+    "protects_assets": ["physical_infrastructure", "data_centers", "workstations"],
+    "tactics": ["Initial Access"],
+    "criticality": "Medium"
+  },
+  "PR.DS-01": {
+    "control_name": "Data-at-rest is protected",
+    "mitigates_techniques": ["T1005", "T1039", "T1025", "T1530"],
+    "protects_assets": ["databases", "file_shares", "backup_systems", "cloud_storage"],
+    "tactics": ["Collection"],
+    "criticality": "Critical"
+  },
+  "PR.DS-02": {
+    "control_name": "Data-in-transit is protected",
+    "mitigates_techniques": ["T1040", "T1557", "T1185", "T1557.002"],
+    "protects_assets": ["network_communications", "web_traffic", "email_systems"],
+    "tactics": ["Credential Access", "Collection"],
+    "criticality": "Critical"
+  },
+  "PR.DS-10": {
+    "control_name": "Confidentiality, integrity, and availability of data-in-use is protected",
+    "mitigates_techniques": ["T1055", "T1003", "T1056"],
+    "protects_assets": ["runtime_memory", "process_data"],
+    "tactics": ["Credential Access", "Collection", "Defense Evasion"],
+    "criticality": "High"
+  },
+  "PR.PS-01": {
+    "control_name": "Configuration management practices are established and applied",
+    "mitigates_techniques": ["T1574", "T1546", "T1547"],
+    "protects_assets": ["servers", "workstations", "network_devices"],
+    "tactics": ["Persistence", "Privilege Escalation"],
+    "criticality": "High"
+  },
+  "PR.PS-02": {
+    "control_name": "Software is maintained, replaced, and removed commensurate with risk",
+    "mitigates_techniques": ["T1190", "T1203", "T1210", "T1068"],
+    "protects_assets": ["web_applications", "servers", "workstations"],
+    "tactics": ["Initial Access", "Execution", "Privilege Escalation", "Lateral Movement"],
+    "criticality": "Critical"
+  },
+  "PR.PS-06": {
+    "control_name": "Secure software development practices are integrated",
+    "mitigates_techniques": ["T1195", "T1059", "T1203"],
+    "protects_assets": ["software_supply_chain", "applications"],
+    "tactics": ["Initial Access", "Execution"],
+    "criticality": "High"
+  },
+  "PR.IR-01": {
+    "control_name": "Networks and environments are protected from unauthorized logical access",
+    "mitigates_techniques": ["T1021", "T1563", "T1210", "T1570"],
+    "protects_assets": ["network_infrastructure", "network_segments"],
+    "tactics": ["Lateral Movement"],
+    "criticality": "High"
+  },
+  "PR.IR-04": {
+    "control_name": "Adequate resource capacity to ensure availability is maintained",
+    "mitigates_techniques": ["T1498", "T1499"],
+    "protects_assets": ["servers", "network_infrastructure", "cloud_resources"],
+    "tactics": ["Impact"],
+    "criticality": "Medium"
+  },
+  "DE.CM-01": {
+    "control_name": "Networks and network services are monitored to find potentially adverse events",
+    "mitigates_techniques": ["T1071", "T1090", "T1095", "T1572", "T1048"],
+    "protects_assets": ["network_traffic", "network_devices"],
+    "tactics": ["Command and Control", "Exfiltration"],
+    "criticality": "High"
+  },
+  "DE.CM-02": {
+    "control_name": "The physical environment is monitored to find potentially adverse events",
+    "mitigates_techniques": ["T1200", "T1091"],
+    "protects_assets": ["physical_infrastructure", "data_centers"],
+    "tactics": ["Initial Access"],
+    "criticality": "Medium"
+  },
+  "DE.CM-03": {
+    "control_name": "Computing hardware and software, runtime environments, and their data are monitored",
+    "mitigates_techniques": ["T1059", "T1204", "T1053", "T1547"],
+    "protects_assets": ["endpoints", "servers", "runtime_environments"],
+    "tactics": ["Execution", "Persistence"],
+    "criticality": "High"
+  },
+  "DE.CM-06": {
+    "control_name": "External service provider activities and services are monitored",
+    "mitigates_techniques": ["T1199", "T1133"],
+    "protects_assets": ["third_party_connections", "supply_chain"],
+    "tactics": ["Initial Access"],
+    "criticality": "Medium"
+  },
+  "DE.CM-09": {
+    "control_name": "Computing hardware and software, runtime environments, and their data are monitored",
+    "mitigates_techniques": ["T1027", "T1070", "T1562"],
+    "protects_assets": ["security_tools", "log_infrastructure"],
+    "tactics": ["Defense Evasion"],
+    "criticality": "High"
+  },
+  "DE.AE-02": {
+    "control_name": "Potentially adverse events are analyzed to better understand associated activities",
+    "mitigates_techniques": ["T1070", "T1036", "T1027"],
+    "protects_assets": ["siem_systems", "log_analysis_tools"],
+    "tactics": ["Defense Evasion"],
+    "criticality": "High"
+  },
+  "DE.AE-06": {
+    "control_name": "Information on adverse events is provided to authorized staff and tools",
+    "mitigates_techniques": ["T1562", "T1070"],
+    "protects_assets": ["security_operations", "incident_response_team"],
+    "tactics": ["Defense Evasion"],
+    "criticality": "Medium"
+  },
+  "RS.MA-01": {
+    "control_name": "The incident response plan is executed in coordination with relevant third parties",
+    "mitigates_techniques": ["T1485", "T1490", "T1486", "T1070"],
+    "protects_assets": ["all_systems", "backup_systems", "recovery_infrastructure"],
+    "tactics": ["Impact", "Defense Evasion"],
+    "criticality": "High"
+  },
+  "RS.AN-03": {
+    "control_name": "Analysis is performed to establish what has taken place during an incident",
+    "mitigates_techniques": ["T1070", "T1036"],
+    "protects_assets": ["forensic_evidence", "log_infrastructure"],
+    "tactics": ["Defense Evasion"],
+    "criticality": "High"
+  },
+  "RS.MI-01": {
+    "control_name": "Incidents are contained",
+    "mitigates_techniques": ["T1570", "T1021", "T1563"],
+    "protects_assets": ["network_segments", "compromised_systems"],
+    "tactics": ["Lateral Movement"],
+    "criticality": "Critical"
+  },
+  "RS.MI-02": {
+    "control_name": "Incidents are eradicated",
+    "mitigates_techniques": ["T1547", "T1053", "T1546", "T1136"],
+    "protects_assets": ["all_systems"],
+    "tactics": ["Persistence"],
+    "criticality": "High"
+  },
+  "RC.RP-01": {
+    "control_name": "The recovery portion of the incident response plan is executed",
+    "mitigates_techniques": ["T1486", "T1490", "T1485"],
+    "protects_assets": ["backup_systems", "recovery_infrastructure"],
+    "tactics": ["Impact"],
+    "criticality": "Critical"
+  },
+  "GV.RM-01": {
+    "control_name": "Risk management objectives are established and agreed to by organizational stakeholders",
+    "mitigates_techniques": ["T1195", "T1199"],
+    "protects_assets": ["organizational_governance", "supply_chain"],
+    "tactics": ["Initial Access"],
+    "criticality": "Medium"
+  },
+  "GV.SC-01": {
+    "control_name": "A cybersecurity supply chain risk management program is established",
+    "mitigates_techniques": ["T1195", "T1199", "T1195.002"],
+    "protects_assets": ["software_supply_chain", "third_party_vendors"],
+    "tactics": ["Initial Access"],
+    "criticality": "High"
+  },
+  "ID.RA-01": {
+    "control_name": "Vulnerabilities in assets are identified, validated, and recorded",
+    "mitigates_techniques": ["T1190", "T1210", "T1068"],
+    "protects_assets": ["all_systems"],
+    "tactics": ["Initial Access", "Privilege Escalation", "Lateral Movement"],
+    "criticality": "Critical"
+  },
+  "ID.AM-01": {
+    "control_name": "Inventories of hardware managed by the organization are maintained",
+    "mitigates_techniques": ["T1200", "T1133"],
+    "protects_assets": ["hardware_assets", "network_perimeter"],
+    "tactics": ["Initial Access"],
+    "criticality": "Medium"
+  }
+}

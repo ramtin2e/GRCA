@@ -1,0 +1,32 @@
+# Default Compliance Profile
+# All frameworks treated as REQUIRED — maximum compliance posture.
+# Use this as a baseline, or create custom profiles for tiered analysis.
+
+profile_name: "Full Compliance Baseline"
+description: >
+  Every framework and control is treated as REQUIRED.
+  All gaps are scored at maximum weight. Use this for
+  organizations with strict regulatory obligations.
+
+# Framework-level tier assignments
+# Supported tiers: REQUIRED, DESIRED, NICE_TO_HAVE
+frameworks:
+  NIST_CSF:
+    version: "2.0"
+    tier: REQUIRED
+    overrides: {}          # Per-control tier overrides (control_id: tier)
+
+  ISO_27001:
+    version: "2022"
+    tier: REQUIRED
+    overrides: {}
+
+  SOC2:
+    version: "2017"
+    tier: REQUIRED
+    overrides: {}
+
+  CIS_CONTROLS:
+    version: "8.0"
+    tier: REQUIRED
+    overrides: {}
